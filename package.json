@@ -1,0 +1,26 @@
+{
+  "name": "jasmin-syntax-highlighting",
+  "displayName": "Jasmin Syntax Highlighting",
+  "description": "Very simple syntax highlighting support for Jasmin language (.jazz/.jinc files) in Visual  Studio Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "publisher": "GabrielVuk",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "jasmin",
+      "aliases": ["Jasmin", "jasmin"],
+      "extensions": [".jazz",".jinc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "jasmin",
+      "scopeName": "source.jazz",
+      "path": "./syntaxes/jasmin.tmLanguage.json"
+    }]
+  }
+}

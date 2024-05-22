@@ -1,0 +1,77 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Jasmin",
+	"patterns": [
+	  {
+		"include": "#keywords"
+	  },
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#types"
+	  },
+	  {
+		"include": "#comment"
+	  },
+	  {
+		"include": "#numbers"
+	  }
+	],
+	"repository": {
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.jasmin",
+			"match": "\\b(if|for|to|while|return|fn|require|export|->)\\b"
+		  }
+		]
+	  },
+	  "strings": {
+		"name": "string.quoted.double.jasmin",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.jasmin",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "types": {
+		"patterns": [
+		  {
+			"name": "storage.type",
+			"match": "\\b(u8|u16|u32|u64|16u|32u|64u|int|reg|inline|stack|ptr|param)\\b"
+		  }
+		]
+	  },
+	  "comment": {
+		"patterns": [
+		  {
+			"name": "comment.line.double-slash",
+			"match": "//.*$"
+		  },
+		  {
+			"name": "comment.block",
+			"begin": "/\\*",
+			"end": "\\*/"
+		  }
+		]
+	  },
+	  "numbers": {
+		"patterns": [
+		  {
+			"name": "constant.numeric",
+			"match": "\\b(\\d+)\\b"
+		  },
+		  {
+			"name": "constant.numeric",
+			"match": "\\b(0x[0-9a-fA-F]+)\\b"
+		  }
+		]
+	  }
+	},
+	"scopeName": "source.jazz"
+  }
+  
